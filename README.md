@@ -41,10 +41,10 @@ Vue.js carousel component, optimized to work with Vue.
 First step is to install it using `yarn` or `npm`:
 
 ```bash
-npm install hooper
+npm install nicoinch/hooper
 
 # or use yarn
-yarn add hooper
+yarn add nicoinch/hooper
 ```
 
 ### Use Hooper
