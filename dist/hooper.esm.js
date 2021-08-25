@@ -1,5 +1,5 @@
 /**
-  * Hopper 0.3.4
+  * Hopper 1.0.4
   * (c) 2021
     * @license MIT
     */
@@ -755,10 +755,7 @@ var Carousel = {
         child.type.key = idx;
         child.key = idx;
         slides.push(child);
-      } // update hooper's information of the slide count.
-
-
-      slidesCount.value = slides.length;
+      }
 
       if (config.value.infiniteScroll) {
         slides = renderBufferSlides(slides);
@@ -767,6 +764,9 @@ var Carousel = {
 
       if (slides.length === 0 && (_children$ = children[0]) !== null && _children$ !== void 0 && _children$.children) {
         slides = renderSlides(children[0].children);
+      } else {
+        // update hooper's information of the slide count.
+        slidesCount.value = slides.length;
       }
 
       return slides;
