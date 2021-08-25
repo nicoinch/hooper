@@ -593,9 +593,6 @@ export default {
 
         slides.push(child);
       }
-
-      // update hooper's information of the slide count.
-      slidesCount.value = slides.length;
       if (config.value.infiniteScroll) {
         slides = renderBufferSlides(slides);
       }
@@ -603,6 +600,9 @@ export default {
       // When no slides are found try to find them in the child (<slides v-for=... use case)
       if (slides.length === 0 && children[0]?.children) {
         slides = renderSlides(children[0].children);
+      } else {
+        // update hooper's information of the slide count.
+        slidesCount.value = slides.length;
       }
 
       return slides;
