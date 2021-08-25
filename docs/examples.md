@@ -767,7 +767,7 @@ export default {
 <input v-model="myCarouselData" type="number" min="0" max="5">
 <a href="" @click.prevent="$refs.customControlCarousel.slideNext">next</a>
 
-<hooper ref="customControlCarousel" :itemsToShow="1.5" :centerMode="true" v-on:slide="updateCarousel">
+<hooper ref="customControlCarousel" :itemsToShow="1.5" :centerMode="true">
   <slide>
     slide 1
   </slide>
